@@ -2,7 +2,6 @@ const section2 = document.querySelector(".section-2");
 const tema = document.querySelector(".tema");
 const nav = document.querySelector(".nav");
 const checkBtn = document.getElementById("check");
-
 const topOfSection2 = section2.offsetTop;
 
 function fixNav() {
@@ -17,11 +16,10 @@ function toggleHamburguer() {
   checkBtn.classList.add("check");
 }
 
-console.log(checkBtn);
-
-tema.addEventListener("click", function () {
+function checkToggle() {
   checkBtn.classList.remove("check");
-});
+}
 
+tema.addEventListener("click", checkToggle);
 checkBtn.addEventListener("click", toggleHamburguer);
 window.addEventListener("scroll", fixNav);
